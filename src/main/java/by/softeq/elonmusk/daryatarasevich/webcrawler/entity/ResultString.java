@@ -11,11 +11,11 @@ import java.util.Objects;
 public class ResultString implements Serializable {
     private static final long serialVersionUID = 1L;
     private String name;
-    private String allTermsHitsString;
+    private String allTermsHits;
 
-    public ResultString(String name, String allTermsHitsString) {
+    public ResultString(String name, String allTermsHits) {
         this.name = name;
-        this.allTermsHitsString = allTermsHitsString;
+        this.allTermsHits = allTermsHits;
     }
 
     public String getName() {
@@ -26,12 +26,12 @@ public class ResultString implements Serializable {
         this.name = name;
     }
 
-    public String getAllTermsHitsString() {
-        return allTermsHitsString;
+    public String getAllTermsHits() {
+        return allTermsHits;
     }
 
-    public void setAllTermsHitsString(String allTermsHitsString) {
-        this.allTermsHitsString = allTermsHitsString;
+    public void setAllTermsHits(String allTermsHits) {
+        this.allTermsHits = allTermsHits;
     }
 
     @Override
@@ -40,19 +40,19 @@ public class ResultString implements Serializable {
         if (o == null || getClass() != o.getClass()) return false;
         ResultString that = (ResultString) o;
         return name.equals(that.name) &&
-                allTermsHitsString.equals(that.allTermsHitsString);
+                allTermsHits.equals(that.allTermsHits);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, allTermsHitsString);
+        return Objects.hash(name, allTermsHits);
     }
 
     @Override
     public String toString() {
         return "ResultString{" +
                 "name='" + name + '\'' +
-                ", allTermsHitsString='" + allTermsHitsString + '\'' +
+                ", allTermsHitsString='" + allTermsHits + '\'' +
                 '}';
     }
 }

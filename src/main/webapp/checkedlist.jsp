@@ -14,7 +14,7 @@
     <c:forEach var="result" items="${RESULTS}" >
         <tr>
             <td>${result.name}</td>
-            <td> ${result.allTermsHitsString}</td>
+            <td> ${result.allTermsHits}</td>
         </tr>
     </c:forEach>
 </table>

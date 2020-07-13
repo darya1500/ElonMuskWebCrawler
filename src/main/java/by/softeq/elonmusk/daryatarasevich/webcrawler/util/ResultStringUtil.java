@@ -15,7 +15,7 @@ public class ResultStringUtil {
      * @return total
      */
     public static int getTotal(ResultString resultString) {
-        String[] array = resultString.getAllTermsHitsString().split(" ");
+        String[] array = resultString.getAllTermsHits().split(" ");
         return Integer.parseInt(array[array.length - 1]);
     }
 

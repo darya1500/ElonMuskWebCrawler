@@ -30,8 +30,8 @@ public class ControllerServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
-        Integer depth = Integer.valueOf(request.getParameter("depth"));
-        Integer pages = Integer.valueOf(request.getParameter("pages"));
+        int depth = Integer.parseInt(request.getParameter("depth"));
+        int pages = Integer.parseInt(request.getParameter("pages"));
         switch (action) {
             case "check": {
                 BasicCrawler crawler = new WebCrawler();
@@ -39,6 +39,9 @@ public class ControllerServlet extends HttpServlet {
                 request.setAttribute("RESULTS", results);
                 request.getRequestDispatcher("/checkedlist").forward(request, response);
             }
+            default:
+                response.sendRedirect("/index");
+
         }
     }
 }

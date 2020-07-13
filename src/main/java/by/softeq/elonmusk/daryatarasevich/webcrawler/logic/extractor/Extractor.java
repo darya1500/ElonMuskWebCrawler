@@ -22,11 +22,11 @@ import java.util.regex.Pattern;
 public class Extractor {
     private static final Logger log = LogManager.getLogger(Extractor.class);
     Set<ResultString> result;
-    Set<String> newLinks;
+    Set<String> links;
 
     public Extractor() {
         result = new HashSet<>();
-        newLinks = new HashSet<>();
+        links = new HashSet<>();
     }
 
     /**
@@ -43,9 +43,9 @@ public class Extractor {
      * @return Set<ResultString>
      */
     public Set<ResultString> getResult(String url, int depth, int pages, List<String> terms) {
-        if ((!newLinks.contains(url)) && (depth > 0) && (pages > 0)) {
+        if ((!links.contains(url)) && (depth > 0) && (pages > 0)) {
             url = formatUrl(url);
-            newLinks.add(url);
+            links.add(url);
             Document document = null;
             try {
                 document = Jsoup.connect(url).get();

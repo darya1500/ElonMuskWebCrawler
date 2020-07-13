@@ -6,7 +6,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.Writer;
 import java.util.List;
 
 /**
@@ -20,23 +19,17 @@ public class CrawlerWriter {
      * To write result strings to file and to console.
      *
      * @param resultStrings
-     * @param filename
+     * @param filename name of file
      */
     public void write(List<ResultString> resultStrings, String filename) {
         CSVWriter csvWriter;
         try {
-            //writer = new FileWriter(filename);
             csvWriter = new CSVWriter(new FileWriter(filename));
             resultStrings.forEach(a -> {
-                    String temp =  a.getName() + " "+a.getAllTermsHitsString();
-                    //display to console
+                    String temp =  a.getName() + " "+a.getAllTermsHits();
                     System.out.println(temp+"\n");
-
                     String [] record = temp.split(" ");
-                    //Write the record to file
                     csvWriter.writeNext(record);
-                    //writer.write(temp);
-
             });
             csvWriter.close();
         } catch (IOException e) {

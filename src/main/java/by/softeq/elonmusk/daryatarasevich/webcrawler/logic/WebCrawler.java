@@ -30,7 +30,6 @@ public class WebCrawler implements BasicCrawler {
         Finder finder=new Finder();
         List<ResultString> topTenResults=finder.findTopTen(resultStrings);
         CrawlerWriter writer=new CrawlerWriter();
-        //todo
         writer.write( topTenResults, "statistics.csv");
         return topTenResults;
     }
