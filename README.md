@@ -5,10 +5,10 @@ Web crawler app that traverses websites following predefined link depth (8 by de
 ### Terms:
 Tesla, Musk, Gigafactory, Elon Mask
 ### Output:
-https://en.wikipedia.org/wiki/Elon_Musk 208 641 9 0
-acbd.com/page2.html  8 4 0 5 17
-qwerty.com/page1.html  3 2 0 2 7
-anothersite.com/page3.html  0 1 0 1 2
++ https://en.wikipedia.org/wiki/Elon_Musk 208 641 9 0
++ acbd.com/page2.html  8 4 0 5 17
++ qwerty.com/page1.html  3 2 0 2 7
++ anothersite.com/page3.html  0 1 0 1 2
 
 
 ## Clarification:
