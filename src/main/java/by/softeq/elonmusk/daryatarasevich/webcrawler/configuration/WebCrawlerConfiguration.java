@@ -26,7 +26,6 @@ public class WebCrawlerConfiguration {
      */
     public static List<String> getListOfTerms() {
         String termsString = WebCrawlerConfiguration.getProperty("app.terms");
-        List<String> terms = Arrays.asList(termsString.split(","));
-        return terms;
+        return Arrays.asList(termsString.split(","));
     }
 }

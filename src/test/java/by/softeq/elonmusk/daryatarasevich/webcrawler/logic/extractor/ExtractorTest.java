@@ -24,7 +24,7 @@ public class ExtractorTest extends TestCase {
 
     @Test
     public void testGetPageLinks_WhenDataIsInCorrect_ShouldReturnCorrectResult() {
-        actual=extractor.getResult(TestData.URL_EXAMPLE,2,40,TERMS);
+        actual=extractor.getResult(TestData.URL_EXAMPLE,2,100,TERMS);
         Assert.assertNotEquals(expected,actual);
     }
 }
