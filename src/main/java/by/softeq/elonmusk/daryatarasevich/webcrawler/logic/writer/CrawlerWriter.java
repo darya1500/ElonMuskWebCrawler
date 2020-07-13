@@ -18,8 +18,8 @@ public class CrawlerWriter {
     /**
      * To write result strings to file and to console.
      *
-     * @param resultStrings
-     * @param filename name of file
+     * @param resultStrings entity object
+     * @param filename name of file to write to
      */
     public void write(List<ResultString> resultStrings, String filename) {
         CSVWriter csvWriter;
