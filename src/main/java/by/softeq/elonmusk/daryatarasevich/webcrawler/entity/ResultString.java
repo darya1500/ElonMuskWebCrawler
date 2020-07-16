@@ -8,8 +8,8 @@ import java.util.Objects;
  *
  * @autor Darya Tarasevich
  */
-public class ResultString implements Serializable {
-    private static final long serialVersionUID = 1L;
+public class ResultString  {
+
     private String name;
     private String allTermsHits;
 
