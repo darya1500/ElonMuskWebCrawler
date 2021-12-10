@@ -17,7 +17,7 @@
         <jsoup.version>1.10.2</jsoup.version>
         <junit.version>4.13</junit.version>
         <jstl.version>1.2</jstl.version>
-        <log4j2.version>2.11.2</log4j2.version>
+        <log4j2.version>2.15.0</log4j2.version>
     </properties>
 
     <dependencies>
